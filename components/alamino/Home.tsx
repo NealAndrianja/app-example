@@ -2,6 +2,7 @@ import { View, Text, StyleSheet } from "react-native";
 import React, { useState } from "react";
 import Form from "./Form";
 import ProductList from "./ProductList";
+import { Link } from "expo-router";
 
 const styles = StyleSheet.create({
   container: {
@@ -35,6 +36,9 @@ const addProduct = (product: Product) => {
       <Text style={styles.text}>Alamino</Text>
       <Form add={addProduct}/>
       <ProductList products={products}/>
+      <View>
+        <Link href="/Products">View Products</Link>
+      </View>
     </View>
   );
 };
